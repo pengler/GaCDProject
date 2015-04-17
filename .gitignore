@@ -14,3 +14,9 @@ vignettes/*.pdf
 
 # Zip files
 *.zip
+
+# The dataset
+UCI HAR Dataset/*
+
+#swap files
+.*.swp
