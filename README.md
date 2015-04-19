@@ -1,7 +1,7 @@
 # run_analysis.R
 
 This is the course project submission for:   
-###Coursera Course: Getting and Cleaning Data (getdata-013)  
+Coursera Course: Getting and Cleaning Data (getdata-013)   
 
 ## Purpose
 This script will read in the data set from the "Human Activity Recognition
@@ -25,9 +25,9 @@ as the run_analysis.R script
 * The script expects the data to be in the same hierarchy as when you unzip the file
 
 ### Expected file locations (OSX/Linux)
->Activities file         "./UCI HAR Dataset/activity_labels.txt"
->Feature file            "./UCI HAR Dataset/features.txt"
->Test Group Data         "./UCI HAR Dataset/test/X_test.txt"
->Training Group Data     "./UCI HAR Dataset/train/X_train.txt"
->Test Group Subject      "./UCI HAR Dataset/test/subject_test.txt"
->Training Group Subject  "./UCI HAR Dataset/train/subject_train.txt"
+    Activities file         "./UCI HAR Dataset/activity_labels.txt"
+    Feature file            "./UCI HAR Dataset/features.txt"
+    Test Group Data         "./UCI HAR Dataset/test/X_test.txt"
+    Training Group Data     "./UCI HAR Dataset/train/X_train.txt"
+    Test Group Subject      "./UCI HAR Dataset/test/subject_test.txt"
+    Training Group Subject  "./UCI HAR Dataset/train/subject_train.txt"
