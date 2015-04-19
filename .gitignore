@@ -21,3 +21,6 @@ UCI HAR Dataset/*
 
 #swap files
 .*.swp
+
+#txt files
+*.txt
