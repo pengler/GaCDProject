@@ -22,7 +22,7 @@ require (dplyr)
 
 #####
 ## Configuration Variables
-nrowsToImport      <- -1  #Number of rows to import, to allow for quicker testing, set to -1 for whole file
+nrowsToImport      <- 100 #Number of rows to import, to allow for quicker testing, set to -1 for whole file
 fileActivities     <- "./UCI HAR Dataset/activity_labels.txt"      # List of activities
 fileFeatures       <- "./UCI HAR Dataset/features.txt"             # List of features (columns in the data)
 fileTesting        <- "./UCI HAR Dataset/test/X_test.txt"          # Data from the test group
@@ -58,10 +58,14 @@ for ( v in matchColumns) {
 
 ## Read in the testing and training data sets
 testing <- read.table (file = fileTesting, colClasses = importColumns, nrows=nrowsToImport)
-training <- read.table (file = fileTraining, colClasses = importColumns, nrows=nrowsToImport)
+training <- read.table (file = fileTraining, colClasses = importColumns, nrows=nrowsToImport) 
 
 ## Clean up the Column names on both data sets to represent what is in the factors file
 myCols<-as.character(features[matchColumns,]$V2)
+myCols<-gsub("^t","time",myCols)
+myCols<-gsub("^f","frequency",myCols)
+myCols<-gsub("\\(|\\)","",myCols)
+##myCols<-gsub("^tB","timeB",myCols)
 colnames(testing) <- myCols
 colnames(training) <- myCols
 
@@ -92,12 +96,9 @@ training$activity <- trainingActivities$V1
 rm(testActivities)
 rm(trainingActivities)
 
-## Add a dataset factor column to each data set so we can later seperate the data sets if neccessary
-testing$dataset <-as.factor("test")
-training$dataset <-as.factor("train")
-
 ## Reorder out stat sets so that the added columns are on the left
-myCols <- append (myCols, c("subject","activity","dataset"), after=0)
+myCols <- append (myCols, c("subject","activity"), after=0)
+
 testing<-testing[,myCols]
 training<-training[,myCols]
 
@@ -123,5 +124,5 @@ rm(fileTrainSubjects)
 
 #####
 ## Summarize the data and write to a file
-finalDataSummarized <- finalData %>% group_by (activity,subject) %>% summarise_each(funs(mean),c(4:69))
+finalDataSummarized <- finalData %>% group_by (activity,subject) %>% summarise_each(funs(mean),c(3:68))
 write.table (finalDataSummarized, file=fileDataSummarized, row.names=FALSE)
