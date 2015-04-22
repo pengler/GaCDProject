@@ -34,20 +34,20 @@ as the run_analysis.R script
 The following variables can be modified to change the location 
 of the files for data processing. 
 
-|Variable|Decription|Script Default|
-|:-|:-|:-|
-|fileActivities    |  Activities file             | "./UCI HAR Dataset/activity_labels.txt"
-|fileFeatures      |  Feature file                | "./UCI HAR Dataset/features.txt"
-|fileTesting       |  Test group data             | "./UCI HAR Dataset/test/X_test.txt"
-|fileTraining      |  Training group data         | "./UCI HAR Dataset/train/X_train.txt"
-|fileTestSubjects  |  Test group subject data     | "./UCI HAR Dataset/test/subject_test.txt"
-|fileTrainSubjects |  Training group subject data | "./UCI HAR Dataset/train/subject_train.txt"
-|fileDataSummarized|  Output of tidy data         | "./tidyData.txt"
+| Variable | Description | Script Default |
+|:---------|:------------|:---------------|
+|fileActivities    |  Activities file             | "./UCI HAR Dataset/activity_labels.txt" |
+|fileFeatures      |  Feature file                | "./UCI HAR Dataset/features.txt" |
+|fileTesting       |  Test group data             | "./UCI HAR Dataset/test/X_test.txt" |
+|fileTraining      |  Training group data         | "./UCI HAR Dataset/train/X_train.txt" |
+|fileTestSubjects  |  Test group subject data     | "./UCI HAR Dataset/test/subject_test.txt" |
+|fileTrainSubjects |  Training group subject data | "./UCI HAR Dataset/train/subject_train.txt" |
+|fileDataSummarized|  Output of tidy data         | "./tidyData.txt" |
 
-Other Variables
-|Variable|Decription|Script Default|
-|:-|:-|:-|
-|nrowsToImport| Number of rows to import | -1 |
-
+Other Variables:
+| Variable | Description | Script Default|
+|:---------|:------------|:--------------|
+|nrowsToImport| Number of rows to import (-1 = all) | -1 |
+ 
 ### Dependencies
 The script requires the **dplyr** library to function
