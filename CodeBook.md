@@ -53,10 +53,10 @@ numeric factors to more descriptive factors as follows:
 | 5 | STANDING |
 | 6 | LAYING |
 
-* The column header were cleaned up to make them more ledgible as follows: 
-..* The ( and ) charcters were removed. 
-..* The inital "t" was expanded into "time"
-..* The inital "f" was expanded into "frequency"
+* The column header were cleaned up to make them more ledgible as follows:  
+..* The ( and ) charcters were removed.  
+..* The inital "t" was expanded into "time"  
+..* The inital "f" was expanded into "frequency"  
 
 ### Description of variables
 
