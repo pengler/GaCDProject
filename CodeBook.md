@@ -31,17 +31,17 @@ The following files from the "Human Activity and Recognition Using Smartphone" d
 
 ### How the data was derived
  
-1. The original **training** and **test** data sets were culled to limit them 
+* The original **training** and **test** data sets were culled to limit them 
 to columns that matched either **-mean()** or **-std()**. These represent
 the columns containing the means and the standard deviations of the original
 data sets. Please note that several column names contained the value **Mean** but
 they do not represent mean values. Please look at the exclusions section at the 
 end of this document for more detail.  
-2. The **training** and **test** data were extended with additonal columns that
+* The **training** and **test** data were extended with additonal columns that
 represent the **subject** and **activity** for each sample (row)
-3. The **training** and **test** data sets were then merged based on matching
+* The **training** and **test** data sets were then merged based on matching
 all columns
-4. The **activity** column in the data set was modified from the original 
+* The **activity** column in the data set was modified from the original 
 numeric factors to more descriptive factors as follows:  
 
 | Original Factor | New Factor |
@@ -53,10 +53,10 @@ numeric factors to more descriptive factors as follows:
 | 5 | STANDING |
 | 6 | LAYING |
 
-5. The column header were cleaned up to make them more ledgible as follows: 
-5.1 The ( and ) charcters were removed. 
-5.2 The inital "t" was expanded into "time"
-5.3 The inital "f" was expanded into "frequency"
+* The column header were cleaned up to make them more ledgible as follows: 
+..* The ( and ) charcters were removed. 
+..* The inital "t" was expanded into "time"
+..* The inital "f" was expanded into "frequency"
 
 ### Description of variables
 
