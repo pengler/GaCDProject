@@ -30,27 +30,34 @@ The following files from the "Human Activity and Recognition Using Smartphone" d
 
 
 ### How the data was derived
+ 
+1. The original **training** and **test** data sets were culled to limit them 
+to columns that matched either **-mean()** or **-std()**. These represent
+the columns containing the means and the standard deviations of the original
+data sets. Please note that several column names contained the value **Mean** but
+they do not represent mean values. Please look at the exclusions section at the 
+end of this document for more detail.  
+2. The **training** and **test** data were extended with additonal columns that
+represent the **subject** and **activity** for each sample (row)
+3. The **training** and **test** data sets were then merged based on matching
+all columns
+4. The **activity** column in the data set was modified from the original 
+numeric factors to more descriptive factors as follows:  
 
-1. activities.txt contains the mapping from numeric to activitiy description
-1. factors.txt contains the labels for the columns in the data sets
-1. the column names taken from the factors.txt file were cleaned up () symbols removed  
-1. Add the subject information into the testing and training data sets
+| Original Factor | New Factor |
+|-----------------|:-----------|
+| 1 | WALKING |
+| 2 | WALKING_UPSTAIRS |
+| 3 | WALKING_DOWNSTAIRS |
+| 4 | SITTING |
+| 5 | STANDING |
+| 6 | LAYING |
 
-1. Look for any column that contains "mean" or "std" in the description
-and store this in a vector. I use this vector to build a new vector that
-will be used by the "colClasses" arg in read.table so that the script only
-reads in the columns we want, and we dont have to clean up later
+5. The column header were cleaned up to make them more ledgible as follows: 
+5.1 The ( and ) charcters were removed. 
+5.2 The inital "t" was expanded into "time"
+5.3 The inital "f" was expanded into "frequency"
 
-1. Read in the testing and training activity information and convert to factor
-
-    1 WALKING
-    2 WALKING_UPSTAIRS
-    3 WALKING_DOWNSTAIRS
-    4 SITTING
-    5 STANDING
-    6 LAYING
-
-1. Summarize the data and write to a file
 ### Description of variables
 
 | Variable            |  Type  | Description |
@@ -123,3 +130,19 @@ reads in the columns we want, and we dont have to clean up later
 |frequencyBodyBodyGyroMag-std     | num | standard deviation of the magnitude of the frequency domain body acceleration for the via gyroscope|
 |frequencyBodyBodyGyroJerkMag-mean| num | mean of the magnitude of the frequency domain jerk signals for the x-axis via gyroscope|
 |frequencyBodyBodyGyroJerkMag-std | num | standard deviation of the magnitude of the frequency domain jerk signals for the x-axis via gyroscope|
+
+
+## Exculsions
+The following columns contain the term **Mean** however they were purposefully
+omitted from the final data set because the **Mean** is a component in computing 
+these values but the computed values are not **Mean** values. Here are the 
+exlusions for your reference.  
+
+    angle(tBodyAccMean,gravity)
+    angle(tBodyAccJerkMean),gravityMean)
+    angle(tBodyGyroMean,gravityMean)
+    angle(tBodyGyroJerkMean,gravityMean)
+    angle(X,gravityMean)
+    angle(Y,gravityMean)
+    angle(Z,gravityMean)
+
