@@ -44,7 +44,8 @@ of the files for data processing.
 |fileTrainSubjects |  Training group subject data | "./UCI HAR Dataset/train/subject_train.txt" |
 |fileDataSummarized|  Output of tidy data         | "./tidyData.txt" |
 
-Other Variables:
+Other Variables:  
+
 | Variable | Description | Script Default|
 |:---------|:------------|:--------------|
 |nrowsToImport| Number of rows to import (-1 = all) | -1 |
