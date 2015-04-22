@@ -22,7 +22,7 @@ require (dplyr)
 
 #####
 ## Configuration Variables
-nrowsToImport      <- 100 #Number of rows to import, to allow for quicker testing, set to -1 for whole file
+nrowsToImport      <- -1 #Number of rows to import, to allow for quicker testing, set to -1 for whole file
 fileActivities     <- "./UCI HAR Dataset/activity_labels.txt"      # List of activities
 fileFeatures       <- "./UCI HAR Dataset/features.txt"             # List of features (columns in the data)
 fileTesting        <- "./UCI HAR Dataset/test/X_test.txt"          # Data from the test group

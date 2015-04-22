@@ -18,16 +18,36 @@ The description of the data is available here:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ## Running the script
-
+1. Before running the script ensure that the data set has been downloaded and unzipped in the 
+same directory as the **run_analysis.R** script
+2. Start and **R** console or **rstudio**
+3. **source ("run_analysis.R")**
+4. The tidied data will be in same directory in a file named **./tidyData.txt**
+ 
 ### Assumptions 
 * The script expects the data to be downloaded and un-zipped into the same directory 
 as the run_analysis.R script 
 * The script expects the data to be in the same hierarchy as when you unzip the file
 
-### Expected file locations (OSX/Linux)
-    Activities file         "./UCI HAR Dataset/activity_labels.txt"
-    Feature file            "./UCI HAR Dataset/features.txt"
-    Test Group Data         "./UCI HAR Dataset/test/X_test.txt"
-    Training Group Data     "./UCI HAR Dataset/train/X_train.txt"
-    Test Group Subject      "./UCI HAR Dataset/test/subject_test.txt"
-    Training Group Subject  "./UCI HAR Dataset/train/subject_train.txt"
+### File locations and variables 
+
+The following variables can be modified to change the location 
+of the files for data processing. 
+
+|Variable|Decription|Script Default|
+|:-|:-|:-|
+|fileActivities    |  Activities file             | "./UCI HAR Dataset/activity_labels.txt"
+|fileFeatures      |  Feature file                | "./UCI HAR Dataset/features.txt"
+|fileTesting       |  Test group data             | "./UCI HAR Dataset/test/X_test.txt"
+|fileTraining      |  Training group data         | "./UCI HAR Dataset/train/X_train.txt"
+|fileTestSubjects  |  Test group subject data     | "./UCI HAR Dataset/test/subject_test.txt"
+|fileTrainSubjects |  Training group subject data | "./UCI HAR Dataset/train/subject_train.txt"
+|fileDataSummarized|  Output of tidy data         | "./tidyData.txt"
+
+Other Variables
+|Variable|Decription|Script Default|
+|:-|:-|:-|
+|nrowsToImport| Number of rows to import | -1 |
+
+### Dependencies
+The script requires the **dplyr** library to function
