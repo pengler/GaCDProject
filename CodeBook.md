@@ -25,10 +25,6 @@ The following files from the "Human Activity and Recognition Using Smartphone" d
     ./UCI HAR Dataset/train/X_train.txt
     ./UCI HAR Dataset/train/y_train.txt
 
-
-### Description of the data
-
-
 ### How the data was derived
  
 * The original **training** and **test** data sets were culled to limit them 
